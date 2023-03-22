@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/nbf2bgx.css">
+    <style>
+            nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #211F1D;
+            height:70px;
+        }
+        nav > ul {
+            display: flex;
+            margin:0;
+            padding:0;
+            width: 20vw;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+        }
+
+        nav>li {
+            margin-left:50%;
+            justify-content: center;
+        }
+
+        nav a {
+            font-size: 0.8rem;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-family: new-hero, sans-serif;
+            font-style: normal;
+            font-weight: 50;
+            align-items: center;
+        }
+
+        nav > img {
+            width: 300px;
+            height: 100px;
+        }
+
+        .home {
+            width: 200px;
+            height: 100px;
+        }
+
+        .category{
+            display: inline-flex; /* changed from flex to inline-flex */
+            background-color: rgb(208, 208, 208);
+            height:250px;
+            justify-content:center;
+            text-align:center; 
+            flex-wrap:wrap;
+            width:1000px;
+        }
+
+        .caixa_container {
+            background-color: #211F1D;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+        .caixa {
+        font-family: mundial, sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        font-size: 20px;
+        background-color: #211F1D;
+        color: white;
+        line-height: 20px;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        transform-origin: bottom left;
+        }
+
+
+
+        .pictures {
+            margin: 10px; 
+            height: 250px ;
+            width: 200px;
+            text-align:center;
+
+        }
+
+        .single_pic{
+            width: 90%; 
+            height: 90%; 
+            object-fit:cover;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-family: mundial, sans-serif;
+            font-weight: 500;
+            font-style: bold;
+            justify-content:center;
+            text-align: justify;
+            margin-top:2%;
+            margin-right: 20%; 
+            margin-left: 20%;
+            font-size:40px;
+        }
+
+        h3 {
+            font-family: mundial, sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            justify-content:center;
+            text-align: justify;
+            margin-top:0%;
+            margin-right: 20%; 
+            margin-left: 20%;
+            margin-bottom: 5%;
+            font-size:20px;
+            color:grey;
+        }
+
+
+    </style>
+
+</head>
+
+
+
+<body style = "background-color: rgb(255, 255, 255) ;">
+
+    <header>
+        <nav class="nav">
+           <a class = "home"; href="http://127.0.0.1:5000">
+                <img src="https://www.dropbox.com/s/7vhd639oqqk3b9w/capsulator_new_whitepng.png?raw=1"style="width:90%;"/>
+            </a>
+          <ul>
+            <li><a href="http://127.0.0.1:5000/about_us">About us</a></li>
+            <li><a href="http://127.0.0.1:5000/intro">Capsulator</a></li>
+            <li><a href="#">Items</a></li>
+          </ul>
+        </nav>
+        
+      </header>
+
+    <center>
+        <h1>Hi, beautiful!</h1>
+        <h3>This is your tailored capsule wardrobe ♥︎</h3>
+
+
+        <div class="category">
+            <div class="caixa_container"> 
+                <p class="caixa"> Tops </p>
+            </div>
+            {% for index, row in Top.head(4).iterrows() %}
+            <div class= "pictures">
+                <img class="single_pic" src="{{ row['image_link'] }}" alt="{{ row['Item'] }}">
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+        <br>
+        <div class="category">
+            <div class="caixa_container"> 
+                <p class="caixa"> Bottom </p>
+            </div>
+            {% for index, row in Bottom.head(4).iterrows() %}
+            <div class= "pictures">
+                <img class="single_pic" src="{{ row['image_link'] }}" alt="{{ row['Item'] }}">
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+        <br>
+        <div class="category">
+            <div class="caixa_container"> 
+                <p class="caixa"> Coats </p>
+            </div>
+            {% for index, row in Coats.head(4).iterrows() %}
+            <div class= "pictures">
+                <img class="single_pic" src="{{ row['image_link'] }}" alt="{{ row['Item'] }}">
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+        <br>
+        <div class="category">
+            <div class="caixa_container"> 
+                <p class="caixa"> Footwear </p>
+            </div>
+            {% for index, row in Footwear.head(4).iterrows() %}
+            <div class= "pictures">
+                <img class="single_pic" src="{{ row['image_link'] }}" alt="{{ row['Item'] }}">
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+        <br>
+        <div class="category">
+            <div class="caixa_container"> 
+                <p class="caixa"> Accessories </p>
+            </div>
+            {% for index, row in Accessories.head(4).iterrows() %}
+            <div class= "pictures">
+                <img class="single_pic" src="{{ row['image_link'] }}" alt="{{ row['Item'] }}">
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+
+        
+
+
+    </center>
+
+
+</body>
+</html>

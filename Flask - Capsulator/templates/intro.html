@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/nbf2bgx.css">
+    <style>
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #211F1D;
+            height:70px;
+        }
+        nav > ul {
+            display: flex;
+            margin:0;
+            padding:0;
+            width: 20vw;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+        }
+
+        nav>li {
+            margin-left:50%;
+            justify-content: center;
+        }
+
+        nav a {
+            font-size: 0.8rem;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-family: new-hero, sans-serif;
+            font-style: normal;
+            font-weight: 50;
+            align-items: center;
+        }
+
+        nav > img {
+            width: 300px;
+            height: 100px;
+        }
+
+        .home {
+            width: 200px;
+            height: 100px;
+        }
+
+        .first{
+            font-size: 25px;
+            margin-top:10px;
+            font-family: new-hero-hairline, sans-serif;
+            font-weight: 2000;
+            font-style: italic;
+            margin-bottom:0%;
+            margin-right: 0%;
+            margin-left:0%;
+            align-items: center;
+
+        }
+
+        .know{
+            font-size: 40px;
+            margin-top:10px;
+            font-family: mundial, sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            margin-bottom:0%;
+            margin-right: 0%;
+            margin-left:0%;
+            align-items: center;
+        }
+
+        .intro_headers {
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            height: 15vh;
+            background-color: black;
+            align-items: center;
+            margin-top:3%;
+        }
+
+        .explanation {
+            font-family: mundial, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            justify-content:center;
+            text-align: justify;
+            margin-top:2%;
+            margin-right: 20%; 
+            margin-left: 20%;
+            font-size:20px;
+        }
+
+        .explanation2 {
+            font-family: mundial, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            justify-content:center;
+            text-align: justify;
+            margin-top:0%;
+            margin-right: 20%; 
+            margin-left: 20%;
+            font-size:20px;
+        }
+
+        .quiz-button {
+            background-color: #000000; 
+            border: none; 
+            color: white;
+            padding: 10px 20px; 
+            text-align: center; 
+            text-decoration: none; 
+            display: inline-block; 
+            font-size: 16px; 
+            margin: 5px; 
+            border-radius: 5px;
+            font-family: mundial, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+
+        }
+
+        .explanation > a {
+            font-family: mundial, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            justify-content:center;
+            text-align: justify;
+            color:#211F1D;
+
+        }
+
+    </style>
+</head>
+
+
+
+<body style = "background-color: rgb(255, 255, 255) ;">
+
+    <header>
+        <nav class="nav">
+           <a class = "home"; href="http://127.0.0.1:5000">
+            <img src="https://www.dropbox.com/s/7vhd639oqqk3b9w/capsulator_new_whitepng.png?raw=1"style="width:90%;"/>
+            </a>
+          <ul>
+            <li><a href="http://127.0.0.1:5000/about_us">About us</a></li>
+            <li><a href="http://127.0.0.1:5000/intro">Capsulator</a></li>
+          </ul>
+        </nav>
+        
+      </header>
+
+    <center>
+        <div class="intro_headers"> 
+            <h3 style="color: rgb(255, 255, 255)"; class= "first"; text-align:center> First things first...</h3>
+            <h1 style="color: rgb(255, 255, 255)"; class= "know"; text-align:center> Let's get to know each other!</h1>
+        </div>
+
+        <p class="explanation"> In order for the Capsulator to generate your dream capsule wardrobe, it needs to understand your style and preferences first. If you want to learn more about this concept, visit our <a href="http://127.0.0.1:5000/about_us">About us</a> page! </p>
+        <p class="explanation2"> Without any further ado, let's start the quiz!  The rules are simple: you will be presented with a group of photos of different outfits and you'll rate them from  1 ("Hate it!") to 5 ("Love it!")!</p>
+        <br>
+        <a href = "/capsulator"><button class="quiz-button">GOT IT!</button></a>
+    </center>
+
+
+</body>
+</html>
